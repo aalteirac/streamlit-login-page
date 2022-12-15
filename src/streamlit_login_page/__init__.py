@@ -26,7 +26,7 @@ def streamlit_login_page(
 
 
 def main():
-    st.write("## Login")
+    st.write("## Login Page")
     value = streamlit_login_page()
 
     st.write(value)
