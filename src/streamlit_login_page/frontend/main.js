@@ -20,7 +20,6 @@ function onRender(event) {
     loginBtn.addEventListener('click', (event) => {
       var nm=document.querySelector("#name").value;
       sendValue(nm);
-      sendValue(nm);
     }, true);
     window.rendered = true
   }
