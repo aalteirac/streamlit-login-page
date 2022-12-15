@@ -8,7 +8,7 @@ long_description = (this_directory / "README.md").read_text()
 setuptools.setup(
     name="streamlit-login-page",
     #begin 
-    vversion="0.1.1", 
+    version="", 
     #end
     author="Anthony Alteirac",
     author_email="anthony@alteirac.com",
@@ -20,5 +20,5 @@ setuptools.setup(
     include_package_data=True,
     classifiers=[],
     python_requires=">=3.7",
-    install_requires=["streamlit>=1.2", "jinja2"],
+    install_requires=["streamlit>=1.2", "jinja2"], 
 )
