@@ -8,7 +8,7 @@ long_description = (this_directory / "README.md").read_text()
 setuptools.setup(
     name="streamlit-login-page",
     #begin 
-    version="0.0.1", 
+    version="0.0.5", 
     #end
     author="Anthony Alteirac",
     author_email="anthony@alteirac.com",

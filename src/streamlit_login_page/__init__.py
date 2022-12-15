@@ -14,23 +14,41 @@ _component_func = components.declare_component(
 # Create the python function that will be called
 def streamlit_login_page(
     key: Optional[str] = None,
+    height:Optional[int]=830
 ):
     """
     Add a descriptive docstring
     """
     component_value = _component_func(
-        key=key,
+        key=key,height=height
     )
 
     return component_value
 
 
 def main():
-    st.write("## Login Page")
+    st.markdown('''
+        <style>
+        .stApp header{
+            display:none;
+        }
+        .main .block-container{
+            max-width: unset;
+            padding-left: 5em;
+            padding-right: 5em;
+            padding-top: 0em;
+            padding-bottom: 1em;
+            }
+        [data-testid="stMetricDelta"] > div:nth-child(2){
+            justify-content: center;
+        }
+        </style>
+    ''', unsafe_allow_html=True)
+
     value = streamlit_login_page()
 
     st.write(value)
 
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()

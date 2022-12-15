@@ -13,20 +13,18 @@ function sendValue(value) {
  * component gets new data from Python.
  */
 function onRender(event) {
-  // Only run the render code the first time the component is loaded.
+  const {height} = event.detail.args;
   if (!window.rendered) {
-    // You most likely want to get the data passed in like this
-    // const {input1, input2, input3} = event.detail.args
-
-    // You'll most likely want to pass some data back to Python like this
-    // sendValue({output1: "foo", output2: "bar"})
+    Streamlit.setFrameHeight(height)
+    const loginBtn = document.querySelector("#login");
+    loginBtn.addEventListener('click', (event) => {
+      var nm=document.querySelector("#name").value;
+      sendValue(nm);
+    }, true);
     window.rendered = true
   }
 }
 
-// Render the component whenever python send a "render event"
 Streamlit.events.addEventListener(Streamlit.RENDER_EVENT, onRender)
-// Tell Streamlit that the component is ready to receive events
 Streamlit.setComponentReady()
-// Render with the correct height, if this is a fixed-height component
-Streamlit.setFrameHeight(100)
+Streamlit.setFrameHeight(1200)
