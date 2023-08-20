@@ -9,6 +9,7 @@ body {
 
 .box-form {
   margin: 0 auto;
+  width: 80%;
   margin-top: 10%;
   background: #FFFFFF;
   border-radius: 10px;
@@ -70,6 +71,9 @@ body {
   width: 40%;
 }
 @media (max-width: 680px) {
+  .box-form {
+    width: 100%;
+  }
   .box-form .right {
     width: 100%;
   }
