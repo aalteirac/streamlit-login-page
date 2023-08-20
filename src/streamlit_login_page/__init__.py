@@ -50,5 +50,5 @@ def main():
     st.write(value)
 
 
-# if __name__ == "__main__":
-#     main()
+if __name__ == "__main__":
+    main()
