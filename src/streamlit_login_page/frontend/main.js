@@ -14,7 +14,11 @@ function sendValue(value) {
  */
 function onRender(event) {
   const {height} = event.detail.args;
+  const {leftText} = event.detail.args;
+  const {leftSubText} = event.detail.args;
   if (!window.rendered) {
+    document.querySelector("#leftText").textContent=leftText;
+    document.querySelector("#leftSubText").textContent=leftText;
     Streamlit.setFrameHeight(height)
     const loginBtn = document.querySelector("#login");
     loginBtn.addEventListener('click', (event) => {

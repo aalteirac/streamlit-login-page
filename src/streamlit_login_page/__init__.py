@@ -14,13 +14,15 @@ _component_func = components.declare_component(
 # Create the python function that will be called
 def streamlit_login_page(
     key: Optional[str] = None,
-    height:Optional[int]=830
+    height:Optional[int]=830,
+    leftText:Optional[str] = 'Left Text',
+    leftSubText:Optional[str] = 'Left Sub Text'
 ):
     """
     Add a descriptive docstring
     """
     component_value = _component_func(
-        key=key,height=height
+        key=key,height=height,leftText=leftText,leftSubText=leftSubText
     )
 
     return component_value
