@@ -18,7 +18,7 @@ function onRender(event) {
   const {leftSubText} = event.detail.args;
   if (!window.rendered) {
     document.querySelector("#leftText").textContent=leftText;
-    document.querySelector("#leftSubText").textContent=leftText;
+    document.querySelector("#leftSubText").textContent=leftSubText;
     Streamlit.setFrameHeight(height)
     const loginBtn = document.querySelector("#login");
     loginBtn.addEventListener('click', (event) => {
